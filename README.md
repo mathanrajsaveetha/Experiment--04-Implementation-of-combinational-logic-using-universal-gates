@@ -26,18 +26,43 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
-## Logic Diagram
 ## Procedure
+The input and output variables are allocated with letter symbols. The exact truth table that defines the required relationships between inputs and outputs is derived. The simplified Boolean function is obtained from each output. The logic diagram is drawn.
 ## Program:
 /*
+```
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: S.Aishwarya
+RegisterNumber:  212222100003
+module cpmbine(a,b,c,d,f);
+input a,b,c,d;
+output f;
+wire p,q,r;
+assign p=(~c & b & a);
+assign q=(~d & c & c & a);
+assign r=(c & ~b & a);
+assign f=(~(~p & ~q & ~r));
+endmodule
+
+module combine1(a,b,c,d,f);
+input a,b,c,d;
+output f;
+wire p,q,r;
+assign p=(c & ~b & a);
+assign q=(d & ~c & a);
+assign r=(c & ~b & a);
+assign f=((p | q & |r));
+endmodule
 */
-## RTL realization
 
 ## Output:
 ## RTL
+![de exp 2](https://user-images.githubusercontent.com/121418444/232852527-6ab33500-34b7-4ad9-b1d5-fde16b6e1b46.png)
+![de exp 2](https://user-images.githubusercontent.com/121418444/232852628-db93882b-2a1b-4b2b-b631-569ec3a069d0.png)
+
 ## Timing Diagram
+![de exp wf](https://user-images.githubusercontent.com/121418444/232852809-9a8cc8a9-c133-4c3b-accc-b729ce65b987.png)
+![de exp wf1](https://user-images.githubusercontent.com/121418444/232852849-cce85e0c-5f71-4b9d-8cc0-309dbe78c5f8.png)
+
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
