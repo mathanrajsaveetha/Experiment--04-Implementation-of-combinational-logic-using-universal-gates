@@ -53,6 +53,8 @@ assign q=(d & ~c & a);
 assign r=(c & ~b & a);
 assign f=((p | q & |r));
 endmodule
+```
+
 */
 
 ## Output:
@@ -62,7 +64,7 @@ endmodule
 
 ## Timing Diagram
 ![de exp wf](https://user-images.githubusercontent.com/121418444/232852809-9a8cc8a9-c133-4c3b-accc-b729ce65b987.png)
-![de exp wf1](https://user-images.githubusercontent.com/121418444/232852849-cce85e0c-5f71-4b9d-8cc0-309dbe78c5f8.png)
+![de exp wf1](https://user-images.githubusercontent.com/121418444/232853376-c6a75fec-3b98-4ed1-99a8-3c93cc7b8581.png)
 
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
